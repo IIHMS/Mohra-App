@@ -1,17 +1,17 @@
-class Surahs {
-  String? surahName;
-  String? revelationType;
-  String? ayahs;
+// class Surahs {
+//   String? surahName;
+//   String? revelationType;
+//   String? ayahs;
 
-  Surahs({this.surahName,this.revelationType,this.ayahs});
+//   Surahs({this.surahName,this.revelationType,this.ayahs});
 
-  factory Surahs.fromJson(Map<String,dynamic> json){
-    return Surahs(
+//   factory Surahs.fromJson(Map<String,dynamic> json){
+//     return Surahs(
 
-      surahName: json["name"] ?? "",
-      revelationType : json["revelationType"] ?? "",
-      ayahs : json["ayahs"] ?? "",
+//       surahName: json["surahs"][0][1] ?? "",
+//       // revelationType : json["revelationType"] ?? "",
+//       // ayahs : json["ayahs"] ?? "",
 
-    );
-  }
-}
+//     );
+//   }
+// }
