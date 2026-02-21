@@ -1,206 +1,138 @@
-import 'package:mohra_app_final_project/service/api.dart';
+// import 'package:flutter/material.dart';
+
+// class IslamScreen extends StatefulWidget {
+//   IslamScreen({super.key});
+
+//   @override
+//   State<IslamScreen> createState() => _MyWidgetState();
+// }
+
+// class _MyWidgetState extends State<IslamScreen> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: Colors.white,
+//       appBar: AppBar(
+//         leading: Icon(Icons.arrow_back, color: Colors.black),
+//         backgroundColor: Colors.transparent,
+//         elevation: 0,
+//       ),
+//       body: Column(
+//         children: [
+//           buildingContainers("dwdwasawsdwas", Icons.ac_unit),
+//           buildingContainers("dwadwas", Icons.ac_unit),
+//           buildingContainers("dwadwas", Icons.ac_unit),
+//           buildingContainers("dwadwas", Icons.ac_unit),
+//           buildingContainers("dwadwas", Icons.ac_unit),
+//         ],
+//       ),
+//     );
+//   }
+
+//     Widget buildingContainers(String label, IconData icon) {
+//     return Column(
+//       children: [
+//         Icon(icon, color: Color.fromARGB(255, 194, 19, 19), size: 80),
+//         SizedBox(height: 10),
+//         Text(label, style: TextStyle(color: Color.fromARGB(137, 173, 40, 40), fontSize: 12)),
+//       ],
+//     );
+//   }
+// }
+
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+
+void main() => runApp(MaterialApp(home: IslamScreen()));
 
 class IslamScreen extends StatelessWidget {
-  const IslamScreen({super.key});
+  IslamScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-
-    var screenHight = MediaQuery.of(context).size.height;
-    var screenWidth = MediaQuery.of(context).size.width;
     
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title:Row(
+        leading: Icon(Icons.arrow_back, color: Colors.black),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20),
+        child: ListView(
           children: [
-            ElevatedButton.icon(
-                onPressed: () {},
-                label: Icon(Icons.view_list_rounded),
+            
+            Text("                                     الدين", style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
+            Text("                                                                        2025/22/فبراير ", style: TextStyle(color: Colors.grey)),
+            SizedBox(height: 30),
+            
+            Container(
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: Color(0xFF10153D),
+                borderRadius: BorderRadius.circular(30),
               ),
-            SizedBox(width: screenWidth * 0.6,),
-            ElevatedButton.icon(
-                onPressed: () {},
-                label: Icon(Icons.person,),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _buildInfoColumn("القبلة", Icons.explore_outlined),
+                  VerticalDivider(color: Colors.white24, thickness: 1),
+                  _buildInfoColumn("وقت الصلاة", Icons.access_time),
+                ],
               ),
-            // Center(child: Text("", style: TextStyle(color: Colors.white),)),
+            ),
+            SizedBox(height: 20),
+
+            containerCard("القرآن الكريم", Color(0xFF3F215B), "https://cdn.discordapp.com/attachments/1373961556580368468/1474890058317299774/quran.png?ex=699b7de8&is=699a2c68&hm=6c5dda6bb58a2b7d94a5e3abe8321ba5d5f80836d9bb2d4ec2ca4bf9da161507&"),
+            containerCard("الأذكار", Color.fromARGB(255, 121, 122, 180), "https://img.freepik.com/premium-vector/muslim-woman-praying-night-ramadan-vector-concept_445085-48.jpg"),
           ],
         ),
-        backgroundColor: const Color.fromARGB(255, 42, 2, 50), 
       ),
-       body:ListView( 
-              children: [
-                // Container(
-                //   margin: EdgeInsets.all(10),
-                //   decoration: BoxDecoration(
-                //     image: DecorationImage(image: AssetImage("assets/images/mainBackGround.jpeg"), fit: BoxFit.cover), //AI Fix from VS Code
-                //     boxShadow: [
-                //       BoxShadow(
-                //         color: const Color.fromARGB(255, 84, 13, 88),
-                //         blurRadius: 8,
-                //       ),
-                //     ],
-                //     borderRadius: BorderRadius.circular(24),
-                //   ),
-                //   child: Image.asset("assets/images/mainBackGround.jpeg",fit: BoxFit.cover,),
+    );
+  }
 
-                // ),
-
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                      width: screenWidth *0.98,
-                      height: screenHight * 0.20,
-
-                      decoration: BoxDecoration(
-                        image: DecorationImage(image: AssetImage("assets/images/mainBackGround.jpeg"), fit: BoxFit.cover), //AI Fix from VS Code
-                        boxShadow: [
-                          BoxShadow(
-                            color: const Color.fromARGB(255, 117, 117, 117),
-                            blurRadius: 8,
-                          ),
-                        ],
-                        borderRadius: BorderRadius.circular(24),
-                      ),
-                      child: Center(
-                        child: Text(                        // textAlign:,
-                        "مرحبا سلطان",
-                        style: TextStyle(
-                        color: Colors.white,
-                        fontStyle: FontStyle.italic, 
-                        fontSize: 20, 
-                        fontWeight: FontWeight.bold,
-                        )))
-                    ),
-
-
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10, ),
-                  height: screenHight,
-                  width: screenWidth,
-                  //color: const Color.fromARGB(236, 37, 4, 49),
-
-                  decoration: BoxDecoration(
-                    // image: DecorationImage(image: AssetImage("assets/images/mainBackGround.jpeg"), fit: BoxFit.cover), //AI Fix from VS Code
-                    boxShadow: [
-                      BoxShadow(
-                        color: const Color.fromARGB(76, 58, 57, 58),
-                        blurRadius: 8,
-                      ),
-                    ],
-                    borderRadius: BorderRadius.circular(24),
-                  ),
-
-
-                  child: Column(
-                    children: [
-
-                      Container(
-                        margin: EdgeInsets.only(top: 5,left: 165),
-                        width: screenWidth*0.50,
-                        height: screenHight * 0.30,
-                        decoration: BoxDecoration(
-                          // image: DecorationImage(image: AssetImage("assets/images/mainBackGround.jpeg"), fit: BoxFit.cover), //AI Fix from VS Code
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color.fromARGB(255, 60, 1, 60),
-                              // blurRadius: 8,
-                            ),
-                          ],
-                          borderRadius: BorderRadius.circular(24),
-                        ),
-                        child:
-                        Center(
-                          child: Text(
-                          // textAlign:,
-                          "مرحبا سلطان",
-                          style: TextStyle(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          fontStyle: FontStyle.italic, 
-                          fontSize: 35, 
-                          fontWeight: FontWeight.bold,
-                        )),
-
-                        )                 
-                      ),
-
-                      Container(
-                        margin: EdgeInsets.only(top: 5,right: 165),
-                        width: screenWidth*0.50,
-                        height: screenHight * 0.30,
-                        decoration: BoxDecoration(
-                          // image: DecorationImage(image: AssetImage("assets/images/mainBackGround.jpeg"), fit: BoxFit.cover), //AI Fix from VS Code
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color.fromARGB(255, 1, 22, 60),
-                              // blurRadius: 8,
-                            ),
-                          ],
-                          borderRadius: BorderRadius.circular(24),
-                        ),
-                        child:                       
-                          Text(
-                          // textAlign:,
-                          "مرحبا سلطان",
-                          style: TextStyle(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          fontStyle: FontStyle.italic, 
-                          fontSize: 35, 
-                          fontWeight: FontWeight.bold,
-                        )),
-                      ),
-                      //   Text(
-                      //   // textAlign:,
-                      //   "مرحبا سلطان",
-                      //   style: TextStyle(
-                      //   color: const Color.fromARGB(255, 255, 255, 255),
-                      //   fontStyle: FontStyle.italic, 
-                      //   fontSize: 35, 
-                      //   fontWeight: FontWeight.bold,
-                      // )),
-
-                      // Image.asset("assets/images/mainBackGround.jpeg",fit: BoxFit.cover,),
-
-                    ],
-                  )
-                ),
-
-
-
-
-                    // Container(
-                    //   margin: EdgeInsets.all(20),
-                    //   width: screenWidth *0.98,
-                    //   height: screenHight * 0.25,
-
-                    //   decoration: BoxDecoration(
-                    //     image: DecorationImage(image: AssetImage("assets/images/mainBackGround.jpeg"), fit: BoxFit.cover), //AI Fix from VS Code
-                    //     boxShadow: [
-                    //       BoxShadow(
-                    //         color: const Color.fromARGB(255, 84, 13, 88),
-                    //         blurRadius: 8,
-                    //       ),
-                    //     ],
-                    //     borderRadius: BorderRadius.circular(24),
-                    //   ),
-
-                    //   child: Align(
-                    //     alignment: Alignment.bottomCenter,
-                    //     child:Padding(
-                    //       padding: const EdgeInsets.only(bottom: 16),
-                    //       child: ElevatedButton(onPressed: () {
-
-                    //       },
-                    //       style: ButtonStyle(backgroundColor: WidgetStatePropertyAll<Color>(const Color.fromARGB(184, 124, 124, 124))),
-                    //       child: Text("إستكشف المرايا", style: TextStyle(color: const Color.fromARGB(179, 255, 255, 255), fontStyle: FontStyle.italic, fontWeight: FontWeight.w900))),
-                    //     )
-                    //   )
-                    // ),
-
-
-
-
-              ]
+  Widget containerCard(String title, Color color, String imagePath) {
+    return Container(
+      margin: EdgeInsets.only(bottom: 15),
+      height: 120,
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(25),
+      ),
+      child: Stack(
+        children: [
+          Padding(
+            padding: EdgeInsets.only(left: 250, top: 45),
+            child: Text(
+              title,
+              style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
             ),
-          );
+          ),
+          Positioned(
+            // right: 0,
+            bottom: 0,
+            child: ClipRRect(
+              borderRadius: BorderRadius.only(bottomRight: Radius.circular(25)),
+              child: Image.network( // استبدلها بـ AssetImage عند إضافة صورك الخاصة
+                '$imagePath', // ضع رابط الصورة أو المسار هنا
+                height: 100,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildInfoColumn(String label, IconData icon) {
+    return Column(
+      children: [
+        Icon(icon, color: Colors.white, size: 80), // مكان العناصر الرسومية
+        SizedBox(height: 10),
+        Text(label, style: TextStyle(color: Colors.white54, fontSize: 12)),
+      ],
+    );
   }
 }

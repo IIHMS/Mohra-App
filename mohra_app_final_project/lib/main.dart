@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mohra_app_final_project/screens/islam_screen.dart';
+import 'package:mohra_app_final_project/screens/main_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,7 +11,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: IslamScreen()
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen()
     );
   }
 }
