@@ -1,0 +1,54 @@
+{
+  "league": "Saudi Pro League (Roshn)",
+  "season": "2025-2026",
+  "clubs": [
+    {
+      "id": 1,
+      "name": "الهلال",
+      "slug": "al-hilal",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/Al_Hilal_SFC_logo.svg/1200px-Al_Hilal_SFC_logo.svg.png",
+      "league_rank": 1,
+      "points": 62,
+      "total_trophies": 69,
+      "manager": "سيموني إنزاغي",
+      "market_value_euro": 242000000,
+      "key_players": ["ياسين بونو", "كاليدو كوليبالي", "ألكساندر ميتروفيتش"]
+    },
+    {
+      "id": 2,
+      "name": "النصر",
+      "slug": "al-nassr",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1a/Al_Nassr_FC_logo.svg/1200px-Al_Nassr_FC_logo.svg.png",
+      "league_rank": 2,
+      "points": 56,
+      "total_trophies": 28,
+      "manager": "جورجي جيسوس",
+      "market_value_euro": 190000000,
+      "key_players": ["بينتو", "إيميريك لابورت", "كريستيانو رونالدو"]
+    },
+    {
+      "id": 3,
+      "name": "الاتحاد",
+      "slug": "al-ittihad",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Al_Ittihad_Club_logo.svg/1200px-Al_Ittihad_Club_logo.svg.png",
+      "league_rank": 3,
+      "points": 53,
+      "total_trophies": 35,
+      "manager": "لوران بلان",
+      "market_value_euro": 171000000,
+      "key_players": ["موسى ديابي", "نجولو كانتي", "كريم بنزيما"]
+    },
+    {
+      "id": 4,
+      "name": "الأهلي",
+      "slug": "al-ahli",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/Al-Ahli_Saudi_FC_logo.svg/1200px-Al-Ahli_Saudi_FC_logo.svg.png",
+      "league_rank": 4,
+      "points": 48,
+      "total_trophies": 31,
+      "manager": "ماتياس يايسله",
+      "market_value_euro": 160000000,
+      "key_players": ["إدوارد ميندي", "رياض محرز", "إيفان توني"]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "league_name": "Roshn Saudi League",
+  "season": "2023-2024",
+  "teams": [
+    {
+      "rank": 1,
+      "team_name": "Al-Hilal",
+      "nickname": "The Blue Waves",
+      "stadium": "Kingdom Arena",
+      "logo": "https://media.api-sports.io/football/teams/1108.png",
+      "points": 96,
+      "matches_played": 34,
+      "titles": 19,
+      "description": "The most decorated club in Saudi Arabia and Asia."
+    },
+    {
+      "rank": 2,
+      "team_name": "Al-Nassr",
+      "nickname": "The Global",
+      "stadium": "Al-Awwal Park",
+      "logo": "https://media.api-sports.io/football/teams/1107.png",
+      "points": 82,
+      "matches_played": 34,
+      "titles": 9,
+      "description": "Home of Cristiano Ronaldo and one of the biggest clubs in the region."
+    },
+    {
+      "rank": 3,
+      "team_name": "Al-Ahli",
+      "nickname": "The Royal",
+      "stadium": "King Abdullah Sports City",
+      "logo": "https://media.api-sports.io/football/teams/1110.png",
+      "points": 65,
+      "matches_played": 34,
+      "titles": 3,
+      "description": "The first club in Saudi Arabia to win the league, based in Jeddah."
+    },
+    {
+      "rank": 4,
+      "team_name": "Al-Ittihad",
+      "nickname": "The Tigers",
+      "stadium": "King Abdullah Sports City",
+      "logo": "https://media.api-sports.io/football/teams/1109.png",
+      "points": 54,
+      "matches_played": 34,
+      "titles": 9,
+      "description": "The oldest sports club in Saudi Arabia and the current Asian giants."
+    },
+    {
+      "rank": 5,
+      "team_name": "Al-Shabab",
+      "nickname": "The Lion",
+      "stadium": "Al-Shabab Club Stadium",
+      "logo": "https://media.api-sports.io/football/teams/1111.png",
+      "points": 44,
+      "matches_played": 34,
+      "titles": 6,
+      "description": "A historic club from Riyadh known for producing great Saudi talents."
+    }
+  ]
+}
